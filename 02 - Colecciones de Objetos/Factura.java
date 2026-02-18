@@ -42,12 +42,11 @@ public class Factura
       }
       
       public double calculaTotalArticulos() {
-          Articulo recorre;
+          
           double sum = 0.0;
-          for(int index = 0; index < articulos.size(); index++) {
-              recorre = (Articulo) getArticulo(index);
-              sum += recorre.importe();           // BOOOOMMMM!!!!!
-          }
+          /*for(Articulo recorre : articulos) {       // BOOOOMMMM!!!!!
+              sum += recorre.importe();           
+          }*/
           return sum;
       }
 }
