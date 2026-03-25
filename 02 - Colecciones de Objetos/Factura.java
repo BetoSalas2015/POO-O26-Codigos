@@ -14,14 +14,14 @@ public class Factura
       private String cliente;
       private static int num = 1;
       private int folio;
-      private Vector articulos;
+      private Vector<Articulo> articulos;
       
       // Constructores
       public Factura(String nombreCliente) {
         this.empresa = new String("Papelería Pony");
         this.cliente = new String(nombreCliente);
         this.folio = this.num++;
-        this.articulos = new Vector(10);
+        this.articulos = new Vector<Articulo>(10);
       }
       
       // Métodos
@@ -37,16 +37,16 @@ public class Factura
           articulos.set(index, articulo);
       }
       
-      public Object getArticulo(int index) {
+      public Articulo getArticulo(int index) {
           return articulos.get(index);
       }
       
       public double calculaTotalArticulos() {
           
           double sum = 0.0;
-          /*for(Articulo recorre : articulos) {       // BOOOOMMMM!!!!!
+          for(Articulo recorre : articulos) {       // BOOOOMMMM!!!!!
               sum += recorre.importe();           
-          }*/
+          }
           return sum;
       }
 }
